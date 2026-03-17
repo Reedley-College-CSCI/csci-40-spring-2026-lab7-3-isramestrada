@@ -42,7 +42,14 @@ void readTemperatures(TemperatureRecord array[], int& size) {
 
 
 ; // TODO: Fix the parameters
-void printTemperatures(const ???);
+void printTemperatures(const TenmperatureRecord array[], int size) {
+
+    cout << left << setw(10) << "Day" << "Temp" << endl;
+
+    for (int i = 0; i < size; i++) {
+        cout << left << setw(10) << array[i].day << array[i].temperature << endl;
+    }
+}
 TemperatureRecord findMin(const ???);
 TemperatureRecord findMax(const ???);
 double findAverage(const ???);
@@ -56,15 +63,13 @@ int main() {
 
     readTemperatures(tempArray, size);
     // TODO: Step 4 - Print the temperatures
-    for (i = 0; i < size; i++) {
-        cout << "Day " << tempArray[i].day
-            << cout" was " << tempArray[i].temperature << " degrees. " << endl;
-
-    }
-
-    // TODO: Step 5 - Compute and display min, max, and average temperature
+    cout << "Temperature records for the month:" << endl;
+    printTemperatures(tempArray, count);
 
     return 0;
+    // TODO: Step 5 - Compute and display min, max, and average temperature
+
+
 }
 
 // TODO: Step 6 - Implement readTemperatures()
@@ -81,3 +86,7 @@ int main() {
 
 // TODO: Step 10 - Implement findAverage()
 // Compute and return the average temperature
+
+void findAverage() {
+   average = / 31 
+}
