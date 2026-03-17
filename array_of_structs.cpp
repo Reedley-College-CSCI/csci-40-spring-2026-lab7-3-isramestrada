@@ -1,5 +1,7 @@
 #include <iostream>
 #include <fstream>
+#include <iomanip>
+
 using namespace std;
 
 // Step 1 - Define the struct TemperatureRecord
@@ -42,7 +44,7 @@ void readTemperatures(TemperatureRecord array[], int& size) {
 
 
 ; // TODO: Fix the parameters
-void printTemperatures(const TenmperatureRecord array[], int size) {
+void printTemperatures(const TemperatureRecord array[], int size) {
 
     cout << left << setw(10) << "Day" << "Temp" << endl;
 
@@ -50,9 +52,22 @@ void printTemperatures(const TenmperatureRecord array[], int size) {
         cout << left << setw(10) << array[i].day << array[i].temperature << endl;
     }
 }
+/*
 TemperatureRecord findMin(const ???);
 TemperatureRecord findMax(const ???);
-double findAverage(const ???);
+*/
+double findAverage(const TemperatureRecord array[], int size) {
+
+    if (size == 0) return 0.0;
+
+    double total = 0
+
+        for (int i = 0; i < size; i++){
+
+            total += array[i].temperature;
+        }
+    return total / size;
+}
 
 int main() {
     // TODO: Step 2 - Declare an array of TemperatureRecord structs (MAX_DAYS size)
@@ -68,8 +83,8 @@ int main() {
 
     return 0;
     // TODO: Step 5 - Compute and display min, max, and average temperature
-
-
+    double avgResult = findAverage(tempArray, count);
+    cout << "The average temperature is: " << avgResult << endl;
 }
 
 // TODO: Step 6 - Implement readTemperatures()
@@ -87,6 +102,19 @@ int main() {
 // TODO: Step 10 - Implement findAverage()
 // Compute and return the average temperature
 
-void findAverage() {
-   average = / 31 
+double findAverage(TemperatureRecord array[], int size) {
+    // 1. Create a variable to hold the running total
+    double sum = 0;
+
+    // 2. Use a loop to visit every stored record
+    for (int i = 0; i < size; i++) {
+        sum += array[i].temperature; 
+    }
+
+    if (size > 0) {
+        return sum / size;
+    }
+    else {
+        return 0.0; /
+    }
 }
